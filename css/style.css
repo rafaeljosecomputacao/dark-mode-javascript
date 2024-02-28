@@ -1,0 +1,190 @@
+/* Variables */
+:root {
+    --primary-color: #FE5F55;
+    --secondary-color: #707070;
+    --light-background: #E0E0E0;
+    --light-card: #F5F5F5;
+    --light-text: #333333;
+    --dark-background: #292929;
+    --dark-card: #3D3D3D;
+    --dark-text: #C2C2C2;
+}
+
+/* General */
+* {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+}
+  
+body {
+    background-color: var(--light-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+  
+input[type="checkbox"] {
+    display: none;
+}
+  
+/* Main */
+.card {
+    background-color: var(--light-card);
+    width: 75%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .3); 
+}
+  
+.card-image {
+    width: 50%;
+    padding: 1rem;
+    order: 1;
+    text-align: center;
+}
+  
+.card-image img {
+    width: 400px;
+    height: 400px;
+}
+
+.card-details {
+    width: 50%;
+    padding: 1rem;
+    order: 2;  
+}
+
+.card-header-container,
+.card-price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bi {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+  
+.bi-moon {
+    display: none;
+}
+  
+.card-title {
+    color: var(--primary-color);
+    margin: 0;
+}
+  
+.card-subtitle {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+}
+  
+.card-description {
+    color: var(--light-text);
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+.card-price {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+  
+.card-button {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 3rem;
+    width: 12rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+  
+/* Dark theme */
+.dark {
+    background-color: var(--dark-background);
+}
+  
+.dark .bi-sun {
+    display: none;
+}
+  
+.dark .bi-moon {
+    display: block;
+}
+  
+.dark .card {
+    background-color: var(--dark-card);
+}
+  
+.dark .card-description {
+    color: var(--dark-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Main */
+    .card {
+        width: 100%;
+        margin: 0 1rem;
+    }
+
+    .card-image img { 
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* General */
+    body {
+        height: auto;
+    }
+
+    /* Main */
+    .card {
+        flex-direction: column;
+        margin: .5rem;
+        padding: 1rem;
+    }
+      
+    .card-image { 
+        width: 100%;
+        padding: 0;
+        order: 2;
+    }
+
+    .card-image img { 
+        width: 250px;
+        height: 250px;
+    }
+      
+    .card-details {
+        width: 100%;
+        padding: 0;
+        order: 1;
+    }
+
+    .card-price-container {
+        flex-direction: column;
+    }
+
+    .card-price,
+    .card-button {
+        margin-bottom: 2rem;
+    }
+}
