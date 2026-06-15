@@ -149,7 +149,7 @@ input[type="checkbox"] {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 576px) {
     /* General */
     body {
         height: auto;
@@ -158,8 +158,8 @@ input[type="checkbox"] {
     /* Main */
     .card {
         flex-direction: column;
-        margin: .5rem;
-        padding: 1rem;
+        margin: 2rem;
+        padding: 2rem;
     }
       
     .card-image { 
@@ -169,8 +169,8 @@ input[type="checkbox"] {
     }
 
     .card-image img { 
-        width: 250px;
-        height: 250px;
+        width: 275px;
+        height: 275px;
     }
       
     .card-details {
@@ -186,5 +186,18 @@ input[type="checkbox"] {
     .card-price,
     .card-button {
         margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    /* Main */
+    .card {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .card-image img { 
+        width: 250px;
+        height: 250px;
     }
 }
